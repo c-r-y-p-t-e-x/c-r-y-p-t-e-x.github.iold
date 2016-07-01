@@ -398,7 +398,7 @@ z-index: 999;}
 }
 .product-hover:after {
   background: none repeat scroll 0 0 #ffd900;
-  content: "\f00e";
+  content: "\f09d";
   height: 100%;
   left: -100%;
   opacity: 0.4;
