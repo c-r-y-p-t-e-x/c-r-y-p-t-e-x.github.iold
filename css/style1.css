@@ -274,7 +274,7 @@ z-index: 999;}
   background: transparent;
   display: inline-block;
   width: auto;
-  line-height: 200%px;
+  line-height: 200%;
   padding-left: 40px;
   padding-right: 20px;
   margin: 0;
