@@ -1,0 +1,45 @@
+.navbar-default {
+    
+    box-shadow: 0 8px 30px #8BC34A ;
+    
+    border-style:outset;
+    
+    
+   
+   
+    
+    
+    }
+    
+    
+    .owl-next {
+        
+        border-radius:70%;
+       
+        
+    }
+    
+    
+     .owl-prev {
+        
+        border-radius:70%;
+    
+        
+    }
+    
+    .text-primary {
+        bottom:20px;
+        
+    }
+    
+    
+    
+    
+    .zigzag-bottom {  box-shadow: 0 -15px 30px #8BC34A ;
+    
+    
+   
+   
+    
+    
+    }
