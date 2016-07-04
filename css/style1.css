@@ -376,9 +376,14 @@ z-index: 999;}
 .promo1 { background:#8BC34A; box-shadow: 0 -30px 80px rgb(139, 195, 74);
     border-radius: 10%;}
     
-.promo2 { background:#ffd900;}
-.promo3 { background:#FF8400;}
-.promo4 { background:#4abebd;}
+.promo2 { background:#ffd900; box-shadow: 0 -30px 80px rgb(255, 217, 0);
+    border-radius: 10%;}
+    
+.promo3 { background:#FF8400;box-shadow: 0 -30px 80px rgb(255, 132, 0);
+    border-radius: 10%;}
+    
+.promo4 { background:#4abebd;box-shadow: 0 -30px 80px rgb(74, 190, 189);
+    border-radius: 10%;}
 .section-title {
   font-family: "Raleway",sans-serif;
   font-size: 50px;
