@@ -49,7 +49,7 @@ body1 {
 }
 .d1 {
   transform: rotateY(180deg) translateZ(250px);
-  background: #f26522;
+  background: rgba(57, 181, 74, 0.63);
 }
 .e1 {
   transform: rotateY(240deg) translateZ(250px);
