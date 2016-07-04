@@ -367,7 +367,7 @@ z-index: 999;}
 }
 
 
-.promo1:hover {color: #fff;background: #4abebd;}
+.promo1:hover {color: #fff;background: #4abebd; box-shadow: 0 -30px 80px #4abebd;}
 .promo2:hover {color: #fff;background: #FF8400;}
 .promo3:hover {color: #fff;background: #ffd900;}
 .promo4:hover {color: #fff;background: #8BC34A;}
