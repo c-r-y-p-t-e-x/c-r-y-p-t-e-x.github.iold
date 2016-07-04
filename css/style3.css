@@ -68,7 +68,7 @@ body1 {
   cursor: pointer;
   background: transparent;
   border-radius: 100%;
-  border-top: 1px solid #FFF;
+  border-top: 1px solid transparent;
   box-shadow: 0 5px 0 #999;
   transition: box-shadow 0.1s, top 0.1s;
   margin-top:-50px;
