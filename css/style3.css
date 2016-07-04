@@ -71,7 +71,7 @@ body1 {
   border-top: 1px solid #FFF;
   box-shadow: 0 5px 0 #999;
   transition: box-shadow 0.1s, top 0.1s;
-  margin-top:50px;
+  margin-top:-50px;
 }
 .next1:hover, .prev1:hover { color: #fff; background:#FFEB3B; }
 .next1:active, .prev1:active {
