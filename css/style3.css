@@ -41,7 +41,7 @@ body1 {
 }
 .b1 {
   transform: rotateY(60deg) translateZ(250px);
-  background: #0072bc;
+  background: rgba(0, 114, 188, 0.47);
 }
 .c1 {
   transform: rotateY(120deg) translateZ(250px);
