@@ -372,7 +372,31 @@
 
     <div class="container1">
   <div class="carousel1">
-    <div class="item1 a1"><i class="fa fa-copyright fa-1x"></i></div>
+    <div class="item1 a1"> <body>
+
+    <div id="depthchart">
+  <strong><select id="instrument">
+    <option value='this_week' selected>  ЗА НЕДЕЛЮ </option>
+    <option value='next_week'>ЗА 2 НЕДЕЛИ</option>
+    <option value='quarter'>ЗА МЕСЯЦ</option>
+  </select></strong>
+<div class="depthcontainer">
+  <div id='bidgraph'></div>
+  <div id='bop'></div>
+  <div id='bids'></div>
+  <div class='lastlast'><div id='graph'></div><div class='last' id='last'></div></div>
+  <div id='asks'></div>
+</div>
+</div>
+    
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js'></script>
+<script src='https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js'></script>
+<script src='https://onehackoranother.com/projects/jquery/tipsy/javascripts/jquery.tipsy.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
+
+        <script src="js/indexbitcoin.js"></script>
+
+  </body></i></div>
     <div class="item1 b1"><i class="fa fa-copyright fa-1x"></i></div>
     <div class="item1 c1"><i class="fa fa-copyright fa-1x"></i></div>
     <div class="item1 d1"><i class="fa fa-copyright fa-1x"></i></div>
