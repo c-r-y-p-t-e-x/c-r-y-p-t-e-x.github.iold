@@ -45,11 +45,11 @@ body1 {
 }
 .c1 {
   transform: rotateY(120deg) translateZ(250px);
-  background: #39b54a;
+  background: rgba(57, 181, 74, 0.63);
 }
 .d1 {
   transform: rotateY(180deg) translateZ(250px);
-  background: rgba(57, 181, 74, 0.63);
+  background: rgba(242, 101, 34, 0.7);
 }
 .e1 {
   transform: rotateY(240deg) translateZ(250px);
