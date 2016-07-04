@@ -53,11 +53,11 @@ body1 {
 }
 .e1 {
   transform: rotateY(240deg) translateZ(250px);
-  background: #630460;
+  background: rgba(99, 4, 96, 0.48);
 } 
 .f1 {
   transform: rotateY(300deg) translateZ(250px);
-  background: #8c6239;
+  background: rgba(140, 98, 57, 0.72);
 }
 
 .next1, .prev1 {
