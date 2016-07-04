@@ -373,9 +373,7 @@ z-index: 999;}
 .promo4:hover {color: #fff;background: #8BC34A; box-shadow: 0 -30px 80px rgb(74, 190, 189);}
 
 
-.promo1 { background:#8BC34A; -webkit-box-shadow: -4px -3px 30px 26px rgba(0, 255, 0, 0.74);
--moz-box-shadow:    -4px -3px 30px 26px rgba(0, 255, 0, 0.74);
-box-shadow:         -4px -3px 30px 26px #4abebd;
+.promo1 { background:#8BC34A; box-shadow: 0 -30px 80px #4abebd;
     border-radius: 10%;}
     
 .promo2 { background:#ffd900; box-shadow: 0 -30px 80px #ff8400;
