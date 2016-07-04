@@ -32,7 +32,8 @@ body1 {
   color: #FFFFFF;
   opacity: 1.95;
   border-radius: 20px;
-  box-shadow: inset 0 35px 100px #FFFFFF
+  box-shadow: inset 0 35px 100px #FFFFFF;
+  box-shadow: inset 0 -35px 100px #FFFFFF;
 }
 
 .a1 {
