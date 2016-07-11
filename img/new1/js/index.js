@@ -8,7 +8,7 @@
 var canvasDiv = document.getElementById('particle-canvas');
 var options = {
   particleColor: '#888',
-  background: 'https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg',
+  background: 'http://scrapmania.ru/i/img/shop/s/14/48/7_/14487_1332923524_39259.jpg',
   interactive: true,
   speed: 'medium',
   density: 'high'
