@@ -1,0 +1,500 @@
+PX = (1/16)rem
+gs = 10*PX
+
+rect()
+  width  arguments
+  height arguments
+nw()
+  top  arguments
+  left arguments
+circle()
+  rect arguments
+  border-radius 50%
+
+easy-click()
+  &:after
+    content ''
+    position absolute
+    rect 200%
+    z-index 1
+    nw -50%
+
+c-deep-purple = #28143f
+body
+  background c-deep-purple
+  font-size 16px
+  margin  0
+  padding 0
+  user-select none
+  overflow hidden
+  font-family Open Sans, sans-serif
+  min-width 768px
+.curtain
+  rect 100%
+  position fixed
+  nw 0
+  background rgba(#28143f, 1)
+  z-index 30
+  opacity 1
+  transition all .8s ease-out
+  procWidth = 150
+  &__progress
+    height 1*PX
+    width  procWidth*PX
+    border-radius 4*PX
+    background white
+    position absolute
+    nw 50%
+    margin-left -(procWidth/2)*PX
+    margin-top  - PX
+    transition width .3s ease-out
+  &__progress-text,
+  &__progress-text-gradient
+    position absolute
+    color white
+    font-size 10*PX
+    font-weight 100
+    letter-spacing 1.4*PX
+    position absolute
+    margin-left -(procWidth/2)*PX
+    margin-top  -2*gs
+    nw 50%
+  &__progress-text-gradient
+    width  1.5*procWidth*PX
+    height 16*PX
+    // border 1px solid red
+    z-index 1
+    transition transform .3s ease-out
+    background linear-gradient(to right, rgba(40,18,64,0) 20%,rgba(40,18,64,1) 50%)
+  &.is-hide
+    opacity 0
+    z-index 0
+.badge
+  position fixed
+  nw 0
+  z-index 10
+  color white
+  
+.wrapper
+  position    absolute
+  z-index     1
+  top         0
+  bottom      0
+  left        0
+  right       0
+  overflow    hidden
+    
+.particles
+  perspective 500px
+  perspective-origin 50% 50%
+  overflow visible
+  position relative
+  user-select none
+  position absolute
+  z-index 1
+  tap-highlight-color rgba(0,0,0,0)
+  transform translateZ(0)
+  user-select none
+  text-size-adjust none
+
+particleSize = 150/2
+contentWidth  = 540
+contentHeight = 280
+{el = '.particle'}
+  rect 2*particleSize*PX
+  position absolute
+  nw 0
+  text-align center
+  display block
+  line-height (2*particleSize)*PX
+  &.is-open
+    z-index 20
+    {el}__inner
+      transform scale(15) translateZ(-1000px)
+    {el}__content
+      display block
+  &__inner
+    circle 100%
+    position absolute
+    nw 0
+    transform translateZ(0)
+  &__over-mobile
+    display none
+    .desktop &
+      display block
+.content
+  position      fixed
+  width         contentWidth*PX
+  height        contentHeight*PX
+  display       block
+  margin-left  -(contentWidth/2)*PX
+  margin-top   -(contentHeight/2)*PX
+  // border        1px solid white
+  z-index       2
+  nw            50%
+  transform     translateX(-5000px)
+  &__inner
+    position absolute
+    rect 100%
+  &.is-show
+    display     block
+
+.project
+  color white
+  position relative
+  rect 100%
+  &__text, 
+  &__img
+    position absolute
+    width 50%
+    height 100%
+  &__text
+    left 57%
+    margin-top 3*gs
+    width 40%
+    text-align left
+    line-height 1.6
+  h2
+    text-transform uppercase
+  &__shadow-wrap
+    transform-origin 100% center
+  &__shadow
+    position absolute
+    width 300px
+    height 50px
+    opacity 0
+    top 204px
+    right 8px
+    transform rotateX(80deg)
+    border-radius 26px
+    background linear-gradient(to right, rgba(58,8,57,0) 0%,rgba(58,8,57,0.65) 100%)
+    transform-origin 100% center
+    .ie &
+      display none
+.by
+  background    white
+  position      absolute
+  bottom        0
+  right         0
+  height        28*PX
+  width         110*PX
+  z-index       40
+  opacity       .75
+  border-top-left-radius 12*PX
+  &:hover
+    opacity     1
+  &__text
+    color           c-deep-purple
+    font-size       8.5*PX
+    letter-spacing  .2*PX
+    position        absolute
+    top             9*PX
+    .ios &
+      top  8*PX
+    &--1
+      left 7*PX
+    &--2
+      left 70*PX
+  &__logo
+    background    #f1f1f1
+    position      absolute
+    circle        16*PX
+    background url('') no-repeat center
+    center
+    background-size 100% 100%
+    top    7*PX
+    .ios &
+      top  6*PX
+    &--mojs
+      left 49*PX
+      background-image url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/6859/mojs.svg')
+    &--legomushroom
+      left 85*PX
+      background-image url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/6859/legomushroom.svg')
+.sprite
+  &__frame
+    position    absolute
+    nw          0
+    display     block
+    transform   translateZ(0)
+    rect        100%
+  &__ellipse
+    fill        none
+    stroke      white
+.dust
+  position  absolute
+  rect      200*PX
+  height    50*PX
+  &--1
+    top     270*PX
+    left    100*PX
+  &--2,
+  &--3
+  // &--4
+    top     227*PX
+  &--2
+    left   -40*PX
+    opacity .9
+  &--3
+    left   -70*PX
+    opacity .7
+
+blobSize = 100
+.blob-circle
+  position      absolute
+  nw           -50%
+  z-index       1
+  margin-left  -(blobSize/2)*PX
+  margin-top   -(blobSize/2)*PX
+  rect          blobSize*PX
+
+.blob-circle-wrap
+  width   0px
+  height  0px
+  overflow hidden
+
+.close
+  position fixed
+  circle 30*PX
+  top  20%
+  left -10%
+  z-index -1
+  transition opacity .25s ease-out
+  display none
+  &:hover
+    cursor pointer
+  &.is-show
+    display block
+    opacity 1
+    left 75%
+    z-index 10
+
+// image
+.image-ie {
+  width: 256*PX;
+  height: 192*PX;
+  background: url('i/mojs-logo.png') no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 4.5*gs;
+  left: .8*gs;
+  border-radius: 15*PX;
+  display: none;
+  .ie & {
+    display: block;
+  }
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 100%;
+  .ie & {
+    display: none;
+  }
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.shape {
+  opacity: 0;
+}
+
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+  transform: rotateX(90deg);
+}
+
+bgColor     = #fff;
+bgColorDark = darken(bgColor, 20);
+// bgColorDark = #fff;
+.cub-1 {
+  .ft, .bk,
+  .bm {
+    .photon-shader {
+      background-color: bgColor;
+    }
+  }
+  .ft, .bk,
+  .rt, .lt {
+    .photon-shader {
+      background-color: bgColorDark;
+    }
+  }
+  .bm {
+    .photon-shader {
+      background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/6859/mojs-logo.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.cub-1 .cr .photon-shader {
+  background-color: bgColorDark;
+}
+
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+/* .cub-1 styles */
+.cub-1 {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  // opacity:1;
+  width:16em;
+  height:1em;
+  margin:-0.5em 0 0 -8em;
+}
+.cub-1 .ft {
+  transform:translateZ(6em);
+}
+.cub-1 .bk {
+  transform:translateZ(-6em) rotateY(180deg);
+}
+.cub-1 .rt, .cub-1 .lt {
+  width:12em;
+  height:1em;
+}
+.cub-1 .tp, .cub-1 .bm {
+  width:16em;
+  height:12em;
+}
+.cub-1 .face {
+  background-color:#FFFFFF;
+}
+.cub-1 .ft {
+  width:14em;
+  margin-left:1em;
+}
+.cub-1 .bk {
+  width:14em;
+  margin-left:-1em;
+}
+.cub-1 .rt, .cub-1 .lt {
+  width:10em;
+}
+.cub-1 .tp, .cub-1 .bm, .cub-1 .tp .photon-shader, .cub-1 .bm .photon-shader {
+  border-radius:1em;
+}
+
+.cub-1 .cr {
+  width:1em;
+  left:0.5em;
+}
+.cub-1 .cr-0 {
+  transform: translate3D(14em, 0, 5em);
+}
+.cub-1 .cr-1 {
+  transform: translate3D(14em, 0, -5em);
+}
+.cub-1 .cr-2 {
+  transform: translate3D(0, 0, -5em);
+}
+.cub-1 .cr-3 {
+  transform: translate3D(0, 0, 5em);
+}
+.cub-1 .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.975em);
+}
+.cub-1 .side {
+  width:0.5608983848622454em;
+}
+
